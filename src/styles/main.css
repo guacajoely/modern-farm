@@ -34,3 +34,12 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+.container {
+    margin:auto;
+    border: thin solid black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr); 
+    width: 550px;
+}
+
+

@@ -10,7 +10,6 @@ console.log(yearlyPlan)
 import { createAsparagus } from "./seeds/asparagus.js"
 
 const asparagusSeed = createAsparagus()
-console.log(asparagusSeed)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -50,5 +49,14 @@ const harvestedField = harvestPlants(fieldArray)
 
 console.log(harvestedField)
 
+
+
+import { Catalog } from "./catalog.js"
+
+const newCatalog = Catalog(harvestedField)
+
+const parentHTMLElement = document.querySelector(".container")
+
+parentHTMLElement.innerHTML = newCatalog
 
 
