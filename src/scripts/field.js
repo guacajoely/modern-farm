@@ -15,7 +15,7 @@ const field = []
 export const addPlant = (objectOrArray) => {
 
 
-    if(objectOrArray.isArray){
+    if(Array.isArray(objectOrArray)){
         for(const seed of objectOrArray){
             field.push(seed)
         }

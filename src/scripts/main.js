@@ -5,8 +5,10 @@ const yearlyPlan = createPlan()
 console.log(yearlyPlan)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+//TEST createAsparagus function 
 
 import { createAsparagus } from "./seeds/asparagus.js"
+
 const asparagusSeed = createAsparagus()
 console.log(asparagusSeed)
 
@@ -19,7 +21,34 @@ console.log(asparagusSeed)
 import { addPlant } from "./field.js"
 import { usePlants } from "./field.js"
 addPlant(asparagusSeed)
-const newPlant = usePlants()
-console.log(newPlant)
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// In the main.js module, invoke the function that plants all of the seeds, 
+//and then get the plants array from the fields.js module. 
+//Then use console.log() to see if the plants array has been populated correctly.
+
+import { plantSeeds } from "./tractor.js"
+
+plantSeeds(yearlyPlan)
+
+const fieldArray = usePlants()
+console.log(fieldArray)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// In the main.js module, get the array of plants from the field module, 
+// and then harvest them by invoking the appropriate function that you defined above. 
+// Make sure you specify the array of plants as an argument to the harvesting function.
+// Then use console.log() to see your new array of harvested food to sell.
+
+
+import { harvestPlants } from "./harvester.js"
+
+const harvestedField = harvestPlants(fieldArray)
+
+console.log(harvestedField)
+
+
+
